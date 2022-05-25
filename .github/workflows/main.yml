@@ -5,12 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Build and Publish Android Emulator Image
-      uses: elgohr/Publish-Docker-Github-Action@2.7
-      with:
-        name: vsrdouglas/docker_front_test
-
-        workdir: docker-android-emulator
-        username: vsrdouglas
-        password: abc123
-        tag_names: true
+    - name: Build the Docker image
+      run: docker build --file /docker-android-emulator/Dockerfile 
+       
