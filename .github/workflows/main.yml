@@ -8,7 +8,8 @@ jobs:
     - name: Build and Publish Android Emulator Image
       uses: elgohr/Publish-Docker-Github-Action@2.7
       with:
-        name: vgaidarji/docker-android-emulator
+        name: vsrdouglas/docker_front_test
+
         workdir: docker-android-emulator
         username: vsrdouglas
         password: abc123
